@@ -209,7 +209,7 @@ jobs:
 
       - name: Run build
         run: |
-          ./gradlew.bat :test --tests "org.opensearch.knn.index.codec.jvector.JVectorWriterAbortTests.testSmallGraphMergeCompletesWithoutAbortCheck" -Dtests.iters=300 -Dtests.opensearch.logger.level=DEBUG
+          ./gradlew.bat :test --tests "org.opensearch.knn.index.codec.jvector.JVectorWriterAbortTests.testSmallGraphMergeCompletesWithoutAbortCheck" "-Dtests.iters=300" "-Dtests.opensearch.logger.level=DEBUG"
 
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
         if: always()
