@@ -146,7 +146,7 @@ public class JVectorWriterAbortTests extends LuceneTestCase {
             // Rollback the writer — internally calls IndexWriter#abortMerges(),
             long startRollback = System.currentTimeMillis();
             writer.rollback();
-            mergeThread.join(10000);
+            mergeThread.join(10000); //
 
             long rollbackElapsed = System.currentTimeMillis() - startRollback;
 
